@@ -31,5 +31,6 @@ urlpatterns = [
     path('fecha/', retornar_parametro),
     path('nombre/<nombre>', mi_nombre),
     path('show_html/', show_html),
-    path('show_html2/', show_html2),
+    path('', show_html),
+    path('show_html2/<cursada>', show_html2),
 ]

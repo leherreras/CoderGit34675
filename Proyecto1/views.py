@@ -33,5 +33,15 @@ def show_html(request):
     return render(request, "template1.html")
 
 
-def show_html2(request):
-    return render(request, "template2.html")
+def show_html2(request, cursada):
+    contexto = {
+        "cursada": cursada,
+        "entidad": "Coder",
+        "fecha": datetime.now(),
+        "lista": [1, 2, 3, 4, 5],
+        "diccionario": {
+            "nombre": "Luis",
+            "apellido": "Herrera"
+        }
+    }
+    return render(request, "template2.html", context=contexto)

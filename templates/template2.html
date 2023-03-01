@@ -9,5 +9,25 @@
 <body>
 <input type="text">
 <button>este es otro boton</button>
+<p style="color: #77237d"> Hola desde {{ entidad }}, estas en la cursada {{ cursada }}</p>
+la fecha en la que estamos corriendo el codigo es {{ fecha }} <br>
+la lista ingresada es: {{ lista }} <br>
+los numeros son:
+{% for numero in lista %}
+    <br>{{ numero }}
+{% endfor %}
+<br> Mi diccionario es: {{  diccionario }}
+{% for key, value in diccionario.items %}
+    <br>{{ key }}: {{ value }}
+{% endfor %}
+<br><br>
+{#este es un comentario#}
+{% if cursada == "36" %}
+    <h1>Estas en la cursada correcta</h1>
+{% else %}
+    <h1>Estas en la cursada incorrecta</h1>
+{% endif %}
+
+
 </body>
 </html>
