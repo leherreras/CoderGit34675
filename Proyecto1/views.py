@@ -17,6 +17,15 @@ def retornar_parametro(request):
 
 
 def mi_nombre(request, nombre):
+    """
+    View to show the name
+    Args:
+        request: request from the GUI
+        nombre: the name of the people
+
+    Returns:
+        return httpResponse with the name
+    """
     return HttpResponse(f"Hola, bienvenido <b>{nombre}</b>")
 
 
